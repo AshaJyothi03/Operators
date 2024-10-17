@@ -1,0 +1,12 @@
+#Monthly Loan Payment Calculator (EMI)
+#EMI = P x R x (1+R)^N / [(1+R)^N-1]
+def Mon_loan_pay(principle,annual_rate,months):
+  monthly_rate = annual_rate / (12 * 100) # Monthly interest rate
+  emi = (principle * monthly_rate * (1 + monthly_rate) ** months) / ((1 +
+monthly_rate) ** months - 1)
+  return emi
+p=int(input("enter principle"))
+r=int(input("enter annual rate"))
+n=int(input("enter months"))
+loan_amount=Mon_loan_pay(p,r,n)
+print("total loan amount:",loan_amount)
