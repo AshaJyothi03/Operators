@@ -1,0 +1,7 @@
+#Convert Celsius to Fahrenheit
+def celsius_To_fahrenheit(celsius):
+  fahrenheit=(9//5)*celsius+32
+  return fahrenheit
+celsius=int(input("enter temperature"))
+temp=celsius_To_fahrenheit(celsius)
+print("Fahrenheit:",temp,"°F")
