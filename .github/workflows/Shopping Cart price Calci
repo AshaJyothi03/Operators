@@ -1,0 +1,11 @@
+#Shopping Cart Total Price Calculation
+def Total_Price_calc(price,quantity,tax_rate):
+  subtotal=price*quantity;
+  tax=subtotal*(tax_rate/100)
+  total=subtotal+tax
+  return total
+price=int(input("enter price per item"))
+quantity=int(input("enter quantity"))
+tax_rate=int(input("enter tax rate"))
+res=Total_Price_calc(price,quantity,tax_rate)
+print("total cart price:",res)
