@@ -1,0 +1,8 @@
+#Body Mass Index(BMI)
+def body_mass_index(weigh,heigh):
+  bmi=weigh//(heigh**2)
+  return bmi
+W=int(input("enter weight"))  #weight must be in kgs
+H=float(input("enter height"))  # height must be in Meters
+res=body_mass_index(W,H)
+print("BMI:",res)
