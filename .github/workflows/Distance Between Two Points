@@ -1,0 +1,12 @@
+#Distance Between Two Points
+#d=√((x2 – x1)² + (y2 – y1)²)
+import math
+def distance_btw_points(x1,y1,x2,y2):
+  distance=math.sqrt(((x2-x1)**2+(y2-y1)**2))
+  return distance
+x1=int(input("enter x1\n"))
+y1=int(input("enter y1\n"))
+x2=int(input("enter x2\n"))
+y2=int(input("enter y2\n"))
+res=distance_btw_points(x1,y1,x2,y2)
+print("distance between two points:",res)
