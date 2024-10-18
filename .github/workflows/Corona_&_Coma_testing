@@ -1,0 +1,37 @@
+from tkinter import *
+from tkinter import messagebox
+window=Tk()
+window.geometry("500x450")
+window.config(bg="yellow")
+window.title("Corona Testing")
+def corona_testing():
+    temp=int(e1.get())
+    breathing=int(e2.get())
+    if(temp>100 and breathing<65):
+        messagebox.showinfo("STATUS","YOUR ARE IN COMA AND EFFECTED BY CORONA")
+    elif(temp>100 and breathing>65):
+        messagebox.showinfo("STATUS","YOU ARE EFFECTED BY CORONA")
+    elif(temp<100 and breathing<65):
+        messagebox.showinfo("STATUS","YOU ARE IN COMA")
+    else:
+        messagebox.showinfo("STATUS","YOU ARE ABSOLUTELY NORMAL")
+
+#layer 1: temperature value
+l1=Label(window,text="Temperature Value",font=50)
+l1.grid(row=0,column=0)
+#entry1 box
+e1=Entry(window)
+e1.grid(row=0,column=1)
+
+#layer2:breathing level
+l1=Label(window,text="Breathing Level",font=50)
+l1.grid(row=1,column=0)
+
+#entry2 box
+e2=Entry(window)
+e2.grid(row=1,column=1)
+#button:for Submit
+b1=Button(window,text="SUBMIT",command=corona_testing)
+b1.grid(row=3,column=3)
+
+window=mainloop()
