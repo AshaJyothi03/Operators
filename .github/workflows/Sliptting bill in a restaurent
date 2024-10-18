@@ -1,0 +1,8 @@
+#Split the Bill in a Restaurant
+def Splitting_bill(Tot_bill,no_of_people):
+  split_bill=Tot_bill/no_of_people
+  return split_bill
+TB=int(input("enter bill amount"))
+NP=int(input("enter no of people"))
+res=Splitting_bill(TB,NP)
+print("each person should pay:",res)
