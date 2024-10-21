@@ -1,0 +1,61 @@
+#write a python to validate gmail credentials remail and lemail and rpwd and lpwd
+from tkinter import *
+from tkinter import messagebox
+window=Tk()
+window.geometry("500x450")
+#window.config(bg="yellow")
+window.title("Email Testing")
+
+def email_checking():
+    remail=e1.get()
+    rpwd=e2.get()
+    lemail=e3.get()
+    lpwd=e4.get()
+    if(remail==lemail and rpwd==lpwd):
+        messagebox.showinfo("STATUS","enroll successfully")
+    else:
+        messagebox.showinfo("STATUS", "invalid information")
+#layer 1: enter registred email
+
+l1=Label(window,text="Re-email",font=40)
+l1.grid(row=0,column=0)
+
+#e1:enter email as input
+e1=Entry(window)
+e1.grid(row=0,column=1)
+
+
+#layer2:registred pwd
+l2=Label(window,text="Re-Pwd",font=40)
+l2.grid(row=1,column=0)
+
+
+#e2:enter pwd as input
+e2=Entry(window)
+e2.grid(row=1,column=1)
+
+
+#layer3:login email
+l3=Label(window,text="L-Email",font=40)
+l3.grid(row=2,column=0)
+
+
+#e3:enter login email as input
+e3=Entry(window)
+e3.grid(row=2,column=1)
+
+
+#layer4:login pwd
+l4=Label(window,text="L-Pwd",font=40)
+l4.grid(row=3,column=0)
+
+
+#e4:enter login pwd as input
+e4=Entry(window)
+e4.grid(row=3,column=1)
+
+#button submit
+b1=Button(window,text="SUBMIT",command=email_checking)
+b1.grid(row=3,column=3)
+
+window.mainloop()
