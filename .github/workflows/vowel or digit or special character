@@ -1,0 +1,10 @@
+#write a python prog given character is vowel or consonent or digit or special character
+data=input("enter character")
+if(data=='a' or data=='e' or data=='i' or data=='o' or data=='u' or data=='A' or data=='E' or data=='I' or data=='O' or data=='U'):
+  print("it is a vowel")
+elif(data>='0' and data<='9'):
+  print("it is a digit")
+elif(data>='a' and data<='z' or data>='A' and data<='Z'):
+  print("it is a consonent")
+else:
+  print("it is a special character")
