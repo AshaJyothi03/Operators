@@ -1,0 +1,25 @@
+from tkinter import *
+from tkinter import messagebox
+window=Tk()
+window.geometry("500x450")
+window.title("Vowel_digit_validation")
+def validate_check():
+    data=e1.get()
+    if(data in "AEIOUaeiou"):
+        messagebox.showinfo("STATUS","It is vowel")
+    elif(data in "0123456789"):
+        messagebox.showinfo("STATUS", "It is digit")
+    elif(data in "@#$%^&*!"):
+        messagebox.showinfo("STATUS", "It is special Character")
+    else:
+        messagebox.showinfo("STATUS", "It is consonent")
+#label1: first number
+l1=Label(window,text="Data", font=30)
+l1.grid(row=0,column=0)
+#entry box for NUM1
+e1=Entry(window)
+e1.grid(row=0, column=1)
+#button for sum
+b1_sum=Button(window,text="Enter",command=validate_check)
+b1_sum.grid(row=4,column=0)
+window.mainloop()
